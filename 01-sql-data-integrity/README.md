@@ -15,6 +15,7 @@ SELECT COUNT(*) AS total_rows,
        SUM(CASE WHEN Exam_Score IS NULL THEN 1 ELSE 0 END) AS null_exam_score_count
 FROM student_performance;
 ```
+![Query 1 Result](img/02_data_results.png)
 - Result: 6,607 total rows processed with 0 null values in key performance fields.
 
 ### 2. Identifying At-Risk Students by School Type
@@ -27,7 +28,7 @@ SELECT School_Type,
 FROM student_performance
 GROUP BY School_Type;
 ```
-
+![Query 1 Result](img/05_data_results.png)
 - Public Schools: 4,598 students | 1,686 At-Risk (36.7%) | Avg Score: 67.2
 - Private Schools: 2,009 students | 710 At-Risk (35.3%) | Avg Score: 67.3
 
@@ -44,6 +45,7 @@ SELECT
 FROM student_performance
 GROUP BY attendance_group;
 ```
+![Query 1 Result](img/06_data_results.png)
 
 ## Key Insights & Recommendations:
 - Students with regular attendance ($\ge 75\%$) achieve an average score of 68.6, compared to 64.8 for the at-risk group — representing a 3.8 point performance drop.
