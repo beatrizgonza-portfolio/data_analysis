@@ -26,3 +26,20 @@ Designed an interactive **Executive Excel Dashboard** to evaluate student attend
 - **Compliance Classification:** Applied the standard 75% institutional attendance threshold:
   ```excel
   =IF([@[attendance_percent]]>=75, "Compliant", "Non-Compliant")
+ 
+### 3. Dynamic KPIs & Pivot Data Model (02_Pivot_Tables & 03_Executive_Dashboard)
+To ensure full interactivity, executive KPI scorecards were dynamically anchored to the underlying Pivot Tables. This enables real-time updates whenever Slicers are applied:
+- Total Students: Dynamic headcount of the active student cohort (1,000 students).
+- Attendance Compliance Rate (%): Real-time percentage of students meeting the 75% threshold (86.0%).
+- Overall Average Exam Score: Institutional baseline exam score (83.5).
+- Interactive Slicers: Connected cross-report filters for Gender and Internet Access driving all Pivot Charts and KPI cards simultaneously.
+![Executive Dashboard Overview](img/kpis_and_slicers.png)
+#### 4. Dashboard Visualizations
+- Bar Chart: Average Exam Score by Parental Education Level — Evaluates academic outcomes by family background.
+- Doughnut Chart: Attendance Compliance Distribution — Visualizes Compliant vs. Non-Compliant student proportions.
+- Line Chart: Academic Performance Trend by Study Hours — Illustrates the relationship between weekly study time and final scores.
+
+## Key Business Insights & Findings
+- Baseline Compliance: 86.0% (860 students) meet or exceed attendance compliance standards, while 14.0% (140 students) are flagged as Non-Compliant.
+- Academic Performance Penalty: Students in the Compliant group achieved an average score of 84.4, compared to 78.3 for Non-Compliant peers — demonstrating a 6.1-point academic penalty associated with low attendance.
+- Socioeconomic Impact: Higher parental education levels consistently correlate with both higher attendance compliance and superior final examination outcomes.
